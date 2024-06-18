@@ -37,22 +37,23 @@ export default function Slider() {
   };
 
   return (
-    <div className="flex w-80 bg-red-900">
-        <div>
+    <div className="flex w-80">
+      <div>
         <BtnSlider moveSlide={() => prevSlide()} direction={"prev"} />
-      {dataSlider.map((obj, index) => {
-        return (
-          <div
-            key={obj.id}
-            className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
-          >
-            <img src={pict1} className="w-52" />
-          </div>
-        );
-      })}
-      <BtnSlider moveSlide={() => nextSlide()} direction={"next"} />
-        </div>
-     
+        {dataSlider.map((obj, index) => {
+          return (
+            <div
+              key={obj.id}
+              className={
+                slideIndex === index + 1 ? "slide active-anim" : "slide"
+              }
+            >
+              <img src={pict1} className="w-52" />
+            </div>
+          );
+        })}
+        <BtnSlider moveSlide={() => nextSlide()} direction={"next"} />
+      </div>
 
       {/* <div className="container-dots">
         {Array.from({ length: 5 }).map((item, index) => (

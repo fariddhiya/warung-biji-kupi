@@ -1,6 +1,6 @@
 import { imajiCoffee } from "../../assets";
 
-const HeaderMenu: React.FC  = () => {
+const HeaderMenu: React.FC = () => {
   const menu = [
     {
       name: "Home",
@@ -29,9 +29,9 @@ const HeaderMenu: React.FC  = () => {
   ];
 
   return (
-    <div className="w-full bg-white py-10 flex justify-between px-56 items-center">
+    <div className="flex w-full items-center justify-between bg-white px-56 py-10">
       <div>
-        <img src={imajiCoffee} alt="" className="sm:w-52 w-72 " />
+        <img src={imajiCoffee} alt="" className="w-72 sm:w-52" />
       </div>
       <div className="flex">
         <div className="flex items-center justify-center">
@@ -48,10 +48,12 @@ const HeaderMenu: React.FC  = () => {
           })}
         </div>
         <div className="flex">
-          <div className="w-24 h-12 flex justify-center items-center bg-tawny-brown mx-2 text-white font-semibold">
+          <div className="mx-2 flex h-12 w-24 items-center justify-center bg-tawny-brown font-semibold text-white">
             Cart (0)
           </div>
-          <div className="w-24 h-12 flex justify-center items-center bg-white mx-2 text-tawny-brown border-tawny-brown border-[1px]">Sign In</div>
+          <div className="mx-2 flex h-12 w-24 items-center justify-center border-[1px] border-tawny-brown bg-white text-tawny-brown">
+            Sign In
+          </div>
         </div>
       </div>
     </div>
